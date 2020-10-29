@@ -6,8 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-   
-
+ <form method="GET" action="demo2.html">
+     <table border=1 cellspacing=5 cellspcaing=3>
+<tr>
+     <th>Enter Name:</th>
+     <td><input type="text" name ="username" id="uname" placeholder="Enter Name"/></td>
+</tr>
+     <tr>
+         <th>Enter Password:</th>  
+         <td><input type="password" name ="password" id="uname" placeholder="Enter password"/></td> 
+        </tr>
+        <tr>
+            <th>Gender:
+            </th>
+            <td>
+                <input type="radio" name="gender" value="g1"/>Male 
+                <input type="radio" name="gender" value="g2"/>Female
+            </td>
+        </tr>
+        <tr>
+            <th>Hobbies:
+            </th>
+            <td>
+                <input type="checkbox" name="hobby" value="0"/> sports
+<input type="checkbox" name="hobby" value="1"/> Music
+<input type="checkbox" name="hobby" value="2"/> Dance 
+<input type="checkbox" name="hobby" value="3"/> Reading
+            </td>
+        </tr>
+        <tr>
+            <th>Select Language:
+            </th>
+            <td>
+                <select name="lang" id="lang" multiple size="3">
+                    <option value="select">--select--</option>
+                    <option value="java">Java</option>
+                    <option value="hibernate">hibernate</option>
+                    <option value="Spring">Springs</option>
+                    <option value="HTML">html</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Comments
+            </th>
+            <td>
+                <textarea name="comment" rows="10" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><input type="submit" value="send"/>
+                <input type="reset" value="clear"/></td>
+        </tr>
+    </table>
+    </form>
 </body>
 </html>
 
@@ -35,3 +87,4 @@
 <!-- textarea -->
 <!-- submit ,reset-->
 <!-- button -->
+
