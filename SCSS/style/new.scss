@@ -1,0 +1,13 @@
+$bgcolor:red;
+$color:yellow;
+
+h2{
+    background-color: $bgcolor;
+    color:$color;
+}
+p{
+    color:$color;
+} 
+div{
+  color:$color;
+} 
