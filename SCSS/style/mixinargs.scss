@@ -18,3 +18,7 @@ p
 {
 @include boder-style($bgcolor:biege)
 }
+p#myid
+{
+    @include header-style(red,40px ,green )
+}

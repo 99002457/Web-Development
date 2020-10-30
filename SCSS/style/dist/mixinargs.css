@@ -14,3 +14,9 @@ p {
   border: green solid 2px;
   background-color: biege;
 }
+
+p#myid {
+  color: red;
+  font-size: 40px;
+  background-color: green;
+}

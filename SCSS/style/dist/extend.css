@@ -1,0 +1,21 @@
+h1, p, h2#headtwo, div > p {
+  color: green;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+}
+
+#headone {
+  background-color: blueviolet;
+}
+
+div > p {
+  background-color: aqua;
+}
+
+h2, h3#headthree, h2#headtwo {
+  text-decoration: underline;
+}
+
+h2#headtwo {
+  background-color: brown;
+}
