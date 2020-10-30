@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,th,td{
+            border :1rem solid dodgerblue; 
+            
+        }
+        .ta
+        {
+            background-color: dodgerblue;
+            color:white;
+        }
+    </style>
 </head>
 <body >
  <form method="GET" action="demo2.html">
-     <table border="10" cellspacing=5 cellspcaing=3>
+     <table  cellspacing=5 cellspcaing=3>
 <tr>
-     <th>Enter Name:</th>
-     <td><input type="text" name ="username" id="uname" placeholder="Enter Name"/></td>
+     <th class="ta">Enter Name:</th>
+     <td class="ta"><input type="text" name ="username" id="uname" placeholder="Enter Name"/></td>
 </tr>
      <tr>
-         <th>Enter Password:</th>  
-         <td><input type="password" name ="password" id="uname" placeholder="Enter password"/></td> 
+         <th class="ta">Enter Password:</th>  
+         <td class="ta"><input type="password" name ="password" id="uname" placeholder="Enter password"/></td> 
         </tr>
         <tr>
-            <th>Gender:
+            <th class="ta">Gender:
             </th>
-            <td>
+            <td class="ta">
                 <input type="radio" name="gender" value="g1" checked/>Male 
                 <input type="radio" name="gender" value="g2"/>Female
             </td>
         </tr>
         <tr>
-            <th>Hobbies:
-            </th>
-            <td>
+            <th class="ta">Hobbies:</th>
+          
+            <td class="ta">
 <input type="checkbox" name="hobby" value="3" checked/> Reading
 <input type="checkbox" name="hobby" value="0" /> Sports
 <input type="checkbox" name="hobby" value="1"/> Music
@@ -36,10 +47,10 @@
             </td>
         </tr>
         <tr>
-            <th>Select Language:
+            <th class="ta">Select Language:
             </th>
-            <td>
-                <select name="lang" id="lang" multiple size="3">
+            <td class="ta" align="senter">
+                <select class="ta"  name="lang" id="lang" multiple size="3">
                     <option value="select" selected>--select--</option>
                     <option value="java">Java</option>
                     <option value="hibernate">hibernate</option>
@@ -49,14 +60,14 @@
             </td>
         </tr>
         <tr>
-            <th>Enter Comments
+            <th class="ta">Enter Comments
             </th>
-            <td>
-                <textarea name="comment" rows="10" cols="30"></textarea>
+            <td class="ta">
+                <textarea  class="ta"name="comment" rows="10" cols="30"></textarea>
             </td>
         </tr>
         <tr align="center">
-            <td colspan="2"><input type="submit" value="send"/>
+            <td colspan="2" class="ta"><input type="submit" value="send"/>
                 <input type="reset" value="clear"/></td>
         </tr>
     </table>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            /* p,h1,h2
+    {
+        color:forestgreen;
+    }
+    .myclass
+    {
+        background-color: gold;
+    }
+    h2.myclass{
+        letter-spacing: 1 rem;
+        text-decoration: underline;
+    }
+    div p{
+        color:dodgerblue
+    }
+    div>p {
+
+        text-decoration: underline;
+    } */
+/* 
+        div p:last-child
+        {
+            background-color: dodgerblue;
+            color:white;
+        }
+        body p:first-child
+        {
+            background-color: green;
+            color:gold;
+        }
+        p:nth-child(odd)
+        {
+background-color:darkorange;
+color:floralwhite;
+        }
+        p:nth-child(even)
+        {
+background-color: hotpink;
+color:mediumseagreen;
+        } */
+   body :first-child
+    {
+      letter-spacing: 5px;  
+    }
+    body :last-child
+    {
+        background-color: firebrick;
+    }
+    p :first-of-type{background-color:dodgerblue;}
+
+    div :last-child
+    {
+        background-color: gold;
+    }
+    p:last-of-type
+    {
+        background-color: greenyellow;
+    }
+
+    </style>
+</head>
+<body>
+    <p> Inside p</p> 
+    <p class="myclass">Inside P with class</p>
+    <h1>hello world</h1> 
+    <h1 id="header" class="myclass" >Inside h1 with class</h1> 
+    <h2>Inside H2</h2> 
+    <h2 class="myclass">Inside h2</h2>
+     <div> <h1>h1 Inside div</h1> 
+        <p>p child of div</p> 
+        <p>second child of div</p> 
+        <section> <h1>h1 Inside section</h1> 
+            <p>p child of section</p> 
+        </section> 
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt assumenda, similique soluta ea vero eum reiciendis porro officiis sit veritatis quisquam magni quae odit quia? Reiciendis maxime inventore id facilis.</p>
+</body>
+</html>
