@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function add()
+        {
+        var comment=document.getElementById('com');
+        document.getElementById('content').innerHTML=comment.value;
+       
+        }
+    </script>
+</head>
+<body>
+    Enter comment: <textarea id="com"rows=10 onkeyup="add()"cols=10></textarea> 
+    <div id="content" style="background-color: dodgerblue;color: floralwhite;"></div>
+</body>
+</html>

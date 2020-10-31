@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr=new Array(10,30,56,98,76);
+        document.write("Traditional For<br>");
+var arr=[10,30,56,98,76];
+for(let i=0;i<arr.length;i++)
+{
+    document.write(arr[i]+" ");
+}
+document.write("<br><br> Using For In <br>");
+for(const i in arr)
+{
+    document.write(arr[i]+" ");
+}
+document.write(" <br><br>Using For of <br>");
+for(const ele in arr)
+{
+    document.write(ele+" ");
+}
+document.write(" <br> <br>Using For each {value+index} <br>");
+arr.forEach(function(value,index,arr){
+    document.write(index+ ' ' +value+ ' ' +"<br/>")
+})
+
+document.write(" <br>Using For each {renamed value to element}<br>");
+arr.forEach(function(element,index,arr){
+    document.write(element+ ' ' +"<br/>")
+})
+
+document.write("<br> Using For each {arr}<br>");
+arr.forEach(function(element,index,arr){
+    document.write(arr[index]+' ' +"<br/>")
+})
+document.write("<br> Using For each {eale lambda expression}<br>");
+arr.forEach((ele)=>{
+    document.write(ele+' ' +"<br/>")
+})
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

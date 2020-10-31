@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        
+
+    </script>
+    <style>
+        body{
+            
+            color:white;
+            font-size:15px;
+            font-weight:bold;
+            
+        }
+        table,th,td{
+            border:floralwhite 2px dotted;
+            padding:3rem;
+            text-align: center;
+            background-color: dodgerblue;
+        }
+        h1
+        {
+            color:dodgerblue;
+            text-align: center;
+        }
+        .content {
+  max-width: 500px;
+  margin: auto;
+}
+
+    </style>
+    <script>
+       function retrive()
+       {
+       var city=document.getElementById('city').value;
+      var name=document.getElementById('username').value;
+      
+    // document.write(name+" "+city) 
+document.getElementById('content').innerHTML="Great Day " +name+" !"
+document.getElementById('pa').innerHTML="Welcome to "+city;
+       }
+     
+    </script>
+</head>
+<body class="content">
+    <h1 > Demo form</h1>
+<table>
+
+        <tr>
+    <td>
+    Name:</td><td><input type="text" id="username" name="uname" /></td></tr>
+   <tr>
+    <td>
+    City:</td><td><input type="text" id="city" name="city"/></td> </tr><tr>
+    <td colspan="2" ><input type="button" value="Send" class="n" onclick="retrive()"/></td>
+</tr>
+
+</table>
+<div id="content" style="text-align:center;background-color: dodgerblue;color: floralwhite;font-size:50px;"></div>
+<p id="pa" style="text-align:center;background-color: dodgerblue;color: floralwhite;"></p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        
+
+    </script>
+    <style>
+        body{
+            
+            color:white;
+            font-size:15px;
+            font-weight:bold;
+            
+        }
+        table,th,td{
+            border:floralwhite 2px dotted;
+            padding:3rem;
+            text-align: center;
+            background-color: dodgerblue;
+        }
+        h1
+        {
+            color:dodgerblue;
+            text-align: center;
+        }
+        .content {
+  max-width: 500px;
+  margin: auto;
+}
+
+    </style>
+    <script>
+       function login()
+       {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        if(localStorage.getItem('users'))
+        {
+         var a=JSON.parse(localStorage.getItem("users"));
+         var b=JSON.parse(localStorage.getItem("password"));
+            for(i=0;i<a.length;i++)
+                { 
+                    if(a[i]==username && b[i]==password)
+                    {
+                        alert("Welcome to the webiste");break;
+                    }
+                    else
+                    {
+                        flag=0;
+                    }
+                 
+                }
+                if(flag==0)
+                {
+                    alert("enter correct details");
+                }
+        }
+        else
+        {
+            alert('user not registerd please do register');
+        }
+       }
+    </script>
+</head>
+<body class="content">
+    <h1 > Login</h1>
+<table>
+
+        <tr>
+    <td>
+    User:</td><td><input type="text" id="username" /></td></tr>
+   <tr>
+    <td>
+    Password:</td><td><input type="password" id="password" /></td> </tr><tr>
+    <td colspan="2" ><button  class="n" onclick="login()"value="submit">Submit</button><button onclick="clear()"value="Reset">Reset</button></td>
+</tr>
+</table>
+
+</body>
+</html>

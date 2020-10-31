@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function register()
+        {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        var conpassword=document.getElementById("cpassword").value;
+        if(password===conpassword || password.length>6)
+        {
+            var a =localStorage.getItem('users');
+            if(localStorage.getItem('users'))
+            {
+                
+                var a=JSON.parse(localStorage.getItem("users"));
+                var b=JSON.parse(localStorage.getItem("password")); 
+                for(i=0;i<a.length;i++)
+                { 
+                    if(a[i]==username)
+                    {
+                        alert("USERNAME ALREADY EXISTS");
+                        flag=0;
+                        break;
+                    }
+                    else
+                    {
+                        flag=1;
+                    }
+                 
+                }
+                if(flag)
+                {
+                if(username.length>0&&password.length>0){
+                a[a.length]=username;
+                b[b.length]=password;
+                localStorage.setItem("users", JSON.stringify(a));
+                localStorage.setItem("password", JSON.stringify(b));}
+                flag=0;
+                }
+              
+            }
+            else
+            {
+             
+                if(username.length>0&&password.length>0){
+                localStorage.setItem("users", JSON.stringify(new Array(username)));
+                localStorage.setItem("password", JSON.stringify(new Array(password)));}
+            }
+
+        }
+        else
+        {
+            alert("Password not matching or data incorrect, Please Enter Correct Data");
+        }
+        
+        }
+        function clear()
+        {
+         document.getElementById("username").value="";
+        document.getElementById("password").value="";
+        document.getElementById("cpassword").value="";
+        }
+    </script>
+    <style>
+        body{
+            
+            color:white;
+            font-size:15px;
+            font-weight:bold;
+            
+        }
+        table,th,td{
+            border:floralwhite 2px dotted;
+            padding:3rem;
+            text-align: center;
+            background-color: dodgerblue;
+        }
+        
+        h1
+        {
+            color:dodgerblue;
+            text-align: center;
+        }
+        .content {
+  max-width: 500px;
+  margin: auto;
+}
+    </style>
+</head>
+<body class="content">
+    <h1 > Register</h1>
+<table>
+
+        <tr>
+    <td>
+    User:</td><td><input type="text" id="username" /></td></tr>
+   <tr>
+    <td>
+    Password:</td><td><input type="password" id="password" /></td> </tr><tr>
+        <tr>
+    <td>
+    Confirm Password:</td><td><input type="password" id="cpassword" /></td> </tr><tr>
+    <td colspan="2" ><button  class="n" onclick="register()"value="submit">Submit</button><button onclick="clear()"value="Reset">Reset</button></td>
+</tr>
+</table>
+
+</body>
+</html>
