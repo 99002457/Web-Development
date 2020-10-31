@@ -10,7 +10,7 @@
         var username=document.getElementById("username").value;
         var password=document.getElementById("password").value;
         var conpassword=document.getElementById("cpassword").value;
-        if(password===conpassword || password.length>6)
+        if(password===conpassword || password.length>8)
         {
             var a =localStorage.getItem('users');
             if(localStorage.getItem('users'))
@@ -60,7 +60,7 @@
         }
         function clear()
         {
-         document.getElementById("username").value="";
+        document.getElementById("username").value="";
         document.getElementById("password").value="";
         document.getElementById("cpassword").value="";
         }

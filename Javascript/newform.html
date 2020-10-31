@@ -34,12 +34,44 @@
 
     </style>
     <script>
-   
-     
+   function validate()
+   {
+if(document.getElementById('username').value=="")
+{
+    alert('enter the name');
+    document.myform.uname.focus();
+}
+else if(document.getElementById('pass').value=="")
+{
+alert('Enter the Password');
+    document.myform.password.focus();
+    }
+
+else if (document.getElementById('age').value=="")
+   {
+    alert('Enter the Age');
+    document.myform.agee.focus();  
+   }
+   else if (document.getElementById('male').checked=="" && document.getElementById('female').checked=="" )
+   {
+    alert('Enter the gender');
+    document.myform.gender[0].checked=true;  
+   }
+   else
+   {
+       alert('Submiting form');
+       document.myform.submit();
+   }
+
+   }
+  
+    
+    
     </script>
 </head>
 <body class="content">
-    <h1 > Demo form 2</h1>
+    <h1 > Demo form 3</h1>
+    <form action="functionexpressions.html" name="myform">
 <table>
 
         <tr>
@@ -47,12 +79,20 @@
     Name:</td><td><input type="text" id="username" name="uname" /></td></tr>
    <tr>
     <td>
-    City:</td><td><input type="text" id="city" name="city"/></td> </tr><tr>
-    <td colspan="2" ><input type="button" value="Send" class="n" onclick="retrive()"/></td>
+    Password:</td><td><input type="password" id="pass" name="password"/></td> </tr>
+    <tr>
+    <td>
+    Age:</td><td><input type="number" id="age" name="agee"/></td> </tr>
+        <tr>
+<td>
+    Gender:</td><td><input type="radio" id="male" name="gender"/>Male<input type="radio" id="female" name="gender"/>Female</td> </tr>
+    <tr>
+    <td colspan="2" ><input type="button" value="Send" class="n" onclick="validate()"/></td>
 </tr>
 
+
 </table>
-<div id="content" style="text-align:center;background-color: dodgerblue;color: floralwhite;font-size:50px;"></div>
-<p id="pa" style="text-align:center;background-color: dodgerblue;color: floralwhite;"></p>
+</form>
+
 </body>
 </html>
