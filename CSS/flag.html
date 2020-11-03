@@ -27,6 +27,17 @@
           height: 60px;
           background-color: green;
         }
+
+img{
+  transform: rotateZ(50);
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -34,7 +45,7 @@
     <div class="safroon">
     </div>
     <div class="white">
-        <img src="images/image.png"width="60px" height="60px"/>
+        <img src="images/image.png"width="60px" height="60px" />
     </div>
     <div class="green">
     </div>
