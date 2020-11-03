@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var a=document.createElement("div");
+        a.innerHTML=localStorage.getItem('username')+" "+localStorage.getItem('city')+" "+localStorage.getItem('age');
+        document.body.appendChild(a);
+        var b=document.createElement("div");
+        b.innerHTML=sessionStorage.getItem('username')+" "+sessionStorage.getItem('city')+" "+sessionStorage.getItem('age');
+        document.body.appendChild(b);
+    </script>
+</body>
+</html>

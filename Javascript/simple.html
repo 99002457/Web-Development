@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function local()
+        {  
+            localStorage.setItem('username',document.getElementById('username').value);
+            localStorage.setItem('city',document.getElementById('city').value);
+            localStorage.setItem('age',document.getElementById('age').value);
+        }
+    </script>
+</head>
+<body>
+<form action="">
+Name:<input type="text" id="username"/><br>
+City:<input type="text" id="city"/><br>
+Age:<input type="text" id="age"/><br>
+<input type="submit" value="submit" onclick="local()">
+</form>
+</body>
+</html>

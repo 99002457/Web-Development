@@ -5,15 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        function my()
+        {
+        mobile=new Array('Samsung M10',"3GB","Rs1000"," Best Mobile in the class");
+        tv=new Array('Samsung Tv OLED',"new","Rs25000","Best in the class tv");
+        laptop=new Array('Lenovo G4',"8GB","Rs45000"," Best Laptop in the class");
+        if(document.getElementById("s").selectedIndex == "1") 
+        {
+            
+           div=document.getElementById("content");
+           if(document.getElementById("con0"))
+           document.getElementById("con0").remove();
+           if(document.getElementById("con1"))
+           document.getElementById("con1").remove();
+           if(document.getElementById("con2"))
+           document.getElementById("con2").remove();
+           if(document.getElementById("con3"))
+           document.getElementById("con3").remove();
+           for(i=0;i<mobile.length;i++){
+           var a=document.createElement('p');
+           a.id="con"+i;
+           a.innerHTML="Mobile"+mobile[i];
+           div.appendChild(a);
+        }
+        }
+        else if(document.getElementById("s").selectedIndex == "2")
+        {
+
+           div=document.getElementById("content");
+           if(document.getElementById("con0"))
+           document.getElementById("con0").remove();
+           if(document.getElementById("con1"))
+           document.getElementById("con1").remove();
+           if(document.getElementById("con2"))
+           document.getElementById("con2").remove();
+           if(document.getElementById("con3"))
+           document.getElementById("con3").remove();
+           for(i=0;i<tv.length;i++){
+           var a=document.createElement('p');
+           a.id="con"+i;
+           a.innerHTML="Mobile"+tv[i];
+           div.appendChild(a);
+        }
+        }
+        else if(document.getElementById("s").selectedIndex == "3")
+        {
+            div=document.getElementById("content");
+            if(document.getElementById("con0"))
+           document.getElementById("con0").remove();
+           if(document.getElementById("con1"))
+           document.getElementById("con1").remove();
+           if(document.getElementById("con2"))
+           document.getElementById("con2").remove();
+           if(document.getElementById("con3"))
+           document.getElementById("con3").remove();
+           for(i=0;i<laptop.length;i++){
+           var a=document.createElement('p');
+           a.id="con"+i;
+           a.innerHTML="Mobile"+laptop[i];
+           div.appendChild(a);
+        }
+      
+    }
+    else if(document.getElementById("s").selectedIndex == "0")
+        {
+            div=document.getElementById("content");
+            if(document.getElementById("con0"))
+           document.getElementById("con0").remove();
+           if(document.getElementById("con1"))
+           document.getElementById("con1").remove();
+           if(document.getElementById("con2"))
+           document.getElementById("con2").remove();
+           if(document.getElementById("con3"))
+           document.getElementById("con3").remove();
+         
+        }
+}
     </script>
 </head>
 <body>
-    <select>
-        <option> Mobile</option>
-        <option>TV</option>
-        <option>Laptop</option>
+    <select id="s" onchange="my()">
+        <option id="sss"> -select-</option>
+        <option id="mobile"> Mobile</option>
+        <option id="tv">TV</option>
+        <option id="laptop">Laptop</option>
     </select>
-    <div id="content" style="text-align:center;background-color: dodgerblue;color: floralwhite;font-size:50px;"></div>
+    <div id="content" style="margin:30px; width: 500px;background-color:  dodgerblue;color: floralwhite;">
+    
+    </div>
 </body>
 </html>
