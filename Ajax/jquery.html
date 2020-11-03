@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    Name:<input type="text" name="name" id='name'/><br>
+    City:<input type="text" name="city" id='city'/><br>
+    <input type="button" name="send" id='send' value='submit'/>
+    <input type="button" name="getdata" id="getdata" value="getdata"/>
+    <div class='display' id='mydiv' name='mydiv'>
+    </div>
+    <div class='display' id='my' name='my'>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+    </script>
+    <script>
+        // function get() 
+        // {
+        // var name= document.getElementById('name').value;
+        // var city=document.getElementById('city').value;
+        // document.getElementById('mydiv').innerHTML=name+ " " +city;
+        // }
+        $(document).ready(function(){
+            $('#send').click(function(){
+            username=$('#name').val();
+            city=$('#city').val()
+            $('#mydiv').html('Welcome '+ username +' from city ' +city);
+            })
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

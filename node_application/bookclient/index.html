@@ -1,0 +1,79 @@
+<!-- show books form {enter author:search} -->
+<!--SPA support in ajax -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#show').click(function(){
+                var url="http://localhost:3004/showAll"
+                $.get(url,function(data,status){
+                    data.forEach(book => {
+                        var str="";
+                        for(const prop in book)
+                        {
+                            str+=prop+' '+book[prop]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>')
+                    });
+                })
+            })
+
+            $('#asearch').click(function(){
+
+                
+                var url="http://localhost:3004/showByAuthor"
+                var auth=$('#author').val();
+                console.log(auth)
+                console.log(url)
+                $.get(url,{author:auth},function(data,status){
+                    data.forEach(book => {
+                        var str="";
+                        for(const prop in book)
+                        {
+                            str+=prop+' '+book[prop]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>')
+                    });
+                })
+                
+            })
+            $('#csearch').click(function(){
+                
+                var url="http://localhost:3004/showByCategory?category="+$('#category').val();
+                $.get(url,function(data,status){
+                    data.forEach(book => {
+                        var str="";
+                        for(const prop in book)
+                        {
+                            str+=prop+' '+book[prop]+' '+'<br>';
+                        }
+                        $('#mydiv').append(str).append('<br>')
+                    });
+                })
+                
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="button" name="show" id='show' value='showbooks'/><br><br>
+    <form action="" method="">
+        Enter author: <input type="text" name="author" id="author" />
+        <input type="button" id='asearch' name='asearch' value="search by author"/><br><br>
+        Enter category: <input type="text" name="category" id="category" />
+        <input type="button" id='csearch' name='csearch' value="search by category"/><br><br>
+    </form>
+    <div class='display' id='mydiv' name='mydiv'>
+    </div>
+</body>
+</html>
+<!-- async js XML -->
+<!--  xml http request object -->
+<!-- callback functions -->
+<!-- why ajax ,this xml hhtp request -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" name="getdata" id="getdata" value="getdata"/>
+    <div class='display' id='mydiv' name='mydiv'>
+    </div>
+    <div class='display' id='my' name='my'>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#getdata').click(function(){
+                $.get("books.json",function(data,status){
+                
+                    data.forEach(book => {
+                     for (key in book)
+                     {
+                        $('#my').append(book[key]+"<br>");
+                        
+                     }
+                     $('#my').append("<br>");
+                    });
+                })
+            })
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

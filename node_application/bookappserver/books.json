@@ -1,0 +1,58 @@
+[
+    {
+        "Name":"Harry Potter",
+        "Author":"B G Frank",
+        "Publisher":"sapna books",
+        "Book ID":"ISBN00012232334",
+        "category":"novel",
+        "Price":"3000",
+        "series":[1,2,3,4]
+    },
+    {
+        "Name":"Alice in Wonderland",
+        "Author":"B G ",
+        "Publisher":"sapna books",
+        "category":"action",
+        "Book ID":"ISBN00012232334",
+        "Price":"2000",
+        "series":[1,2,3,4]
+    },
+    {
+        "Name":"Potter",
+        "Author":"Manuale",
+        "Publisher":"sapna books",
+        "category":"Fiction",
+        "Book ID":"ISBN00012232334",
+        "Price":"1000",
+        "series":[1,2,3,4]
+    },
+   {
+        "Name":"Harry Potter",
+        "Author":"Raju",
+        "Publisher":"sapna books",
+        "category":"Fiction",
+        "Book ID":"ISBN00012232334",
+        "Price":"100",
+        "series":[1,2,3,4]
+    },
+    {
+        "Name":"Harry Potter in the L N T",
+        "Author":"Raju",
+        "Publisher":"sapna books",
+        "category":"Coding",
+        "Book ID":"ISBN00012232334",
+        "Price":"100",
+        "series":[1,2,3,4]
+    },
+    {
+        "Name":"Harry Potter",
+        "Author":"Divyesh",
+        "Publisher":"sapna books",
+        "category":"Cricket",
+        "Book ID":"ISBN00012232334",
+        "Price":"100",
+        "series":[1,2,3,4]
+    }
+
+ 
+]
